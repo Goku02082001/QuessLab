@@ -1,4 +1,5 @@
 import formSchema from "../models/FormModel.js";
+
 const fromController = async (req, res) => {
   try {
     const {
@@ -9,26 +10,30 @@ const fromController = async (req, res) => {
       Twitter,
       Role,
     } = req.body;
+
     const existingData = await formSchema.find({ LinkedInProfile });
 
     if (existingData.length > 0) {
-      res
+      return res
         .status(201)
-        .json({ message: "Your Data is already exist", existingData });
+        .json({ message: "Your Data already exists", existingData });
     }
 
     const data = new formSchema({
-      FirstName: FirstName,
-      LastName: LastName,
-      ProfilePhoto: ProfilePhoto,
-      LinkedInProfile: LinkedInProfile,
-      Twitter:Twitter,
-      Role:Role
+      FirstName,
+      LastName,
+      ProfilePhoto,
+      LinkedInProfile,
+      Twitter,
+      Role
     });
-    await data.save()
-    res.status(200).json({message:"Your data add SuccessFully",data})
+
+    await data.save();
+
+    return res.status(200).json({ message: "Your data added successfully", data });
+
   } catch (error) {
-    res.status(400).json({message:"Something went wrong ",error:error.message})
+    return res.status(400).json({ message: "Something went wrong", error: error.message });
   }
 };
 

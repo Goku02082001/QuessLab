@@ -1,0 +1,115 @@
+
+.main-wrapper{
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.carousel-container {
+  max-width: 90%;
+  /* border: 1px solid red; */
+  margin: 40px auto;
+}
+.slider-class{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+}
+.crousel-wrapper{
+  padding: 1rem;
+}
+.card-carousel {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-sizing: border-box;
+  margin-left: 20px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+  /* border: 1px solid blue; */
+  padding: 20px;
+}
+
+.card-carousel:hover {
+  transform: scale(1.05);
+}
+
+.card-carousel img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.text-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+.linkdein-twitter-container{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.name{
+    font-size: 16px;
+    font-weight: 700px;
+    margin: 10px;
+}
+.role{
+    font-size: 16px;
+    font-weight: 600px;
+}
+
+.simple-cards-wrapper{
+    display: grid;
+    margin-top: 40px;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: center;
+    align-items: center;
+}
+
+
+.simple-cards-wrapper{
+   display: grid;
+   width: 100%;
+   grid-template-columns: repeat(3,1fr);
+   justify-content: center;
+   justify-items: center;
+   align-self: center;
+   gap: 40px;
+}
+.single-card {
+  width: 200px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
+  border-radius: 13px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.single-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
