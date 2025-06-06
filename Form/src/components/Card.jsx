@@ -13,7 +13,7 @@ const Card = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/api/get")
+      .get("https://quesslab-1.onrender.com/api/get")
       .then((res) => {
         console.log("Fetched Data:", res.data.data);
         setData(res.data.data || []);

@@ -20,7 +20,7 @@ const FormPost = ({ show }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:8080/api/post", formData);
+      const response = await axios.post("https://quesslab-1.onrender.com/api/post", formData);
       alert("Form submitted successfully!");
       setFormData({
         FirstName: "",
